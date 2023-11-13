@@ -532,7 +532,7 @@ function isItPrime(num){
     return true;
   }
   if(num === 0){
-    return " 0 diviso 0 ?"
+    return " 0 diviso 0 nei naturali?"
   }
   for(let i = 2; i <=num; i++){
     if(num % i === 0){
