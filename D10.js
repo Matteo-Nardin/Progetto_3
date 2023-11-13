@@ -498,7 +498,18 @@ addClass()
   ***
 
 */
-
+function halfTree(num){
+  for(let i = 0; i <= num; i++){
+    let j =0;
+    
+    while(j < i){
+      console.log("*");
+      j++;
+    }
+    console.log("\n")
+  }
+}
+console.log(halfTree(5))
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -514,5 +525,11 @@ addClass()
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
+function isItPrime(num){
+  if(num % 2 === 0 && num / 1 === num){
+    return true;
+  }else{
+    return false;
+  }
+}
 
