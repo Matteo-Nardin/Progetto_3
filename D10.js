@@ -47,9 +47,12 @@ me.skills.pop();
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 function dice(){
-  return Math.round(Math.random()*6)
-}
-;/* ESERCIZIO 2
+  let min = 0;
+  let max = 6
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+console.log(dice())
+/* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
 function whoIsBigger(a,b){
@@ -143,7 +146,20 @@ function whatDayIsIt(){
       values: [3, 3, 4]
   }
 */
+function rollTheDices(num){
+  let i = 0;
+  let obj = {sum: 0, values: []}
 
+  while(i < num){
+    roll = dice()
+    obj.values.push(roll);
+    obj.sum += roll;
+    i++
+  }
+  return obj;
+}
+
+console.log(rollTheDices(3))
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
