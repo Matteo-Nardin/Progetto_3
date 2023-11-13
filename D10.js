@@ -500,8 +500,7 @@ addClass()
 */
 function halfTree(num){
   for(let i = 0; i <= num; i++){
-    let j =0;
-    
+    let j = 0;
     while(j < i){
       console.log("*");
       j++;
@@ -509,7 +508,7 @@ function halfTree(num){
     console.log("\n")
   }
 }
-console.log(halfTree(5))
+halfTree(5)
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -522,14 +521,25 @@ console.log(halfTree(5))
 
 */
 
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 function isItPrime(num){
-  if(num % 2 === 0 && num / 1 === num){
+ // nel caso sia 1 o 0 come si faceva!?!?!? mai che mi ricordi
+ // che barbonata
+  if(num === 1 ){
     return true;
-  }else{
-    return false;
+  }
+  if(num === 0){
+    return " 0 diviso 0 ?"
+  }
+  for(let i = 2; i <=num; i++){
+    if(num % i === 0){
+      return false
+    }else{
+      return true
+    }
   }
 }
-
+console.log(isItPrime(0));
