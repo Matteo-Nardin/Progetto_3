@@ -94,22 +94,25 @@ function deleteOne(str,bool){
 */
 
 //usare parseI
-// function onlyLetters(str){
-//   let r = str.split("");
-//   let arr =[];
-//   console.log(r);
-//   for(let i = 0; i < r.length; i++){
-//     if (typeof r[i] === Number){
-//       r.splice(i,1);
-//       console.log(r);
-//     }
-//     arr.push(r[i]);
-//   }
-//   return arr.join("");
-// }
-// let x= "4"
-// console.log(typeof x)
+function onlyLetters(str){
+  let r = str.split("");
+  let arr =[];
+  console.log(r);
+  for(let i = 0; i < r.length; i++){
+    if (isNaN(r[i])){
+      // if(r[i]= " "){
+      //   arr.push(" ");
+      // }
+      arr.push(r[i]);
+      console.log(r[i]);
+    }else{
+      arr.splice(i,1, " ");
+    }
+  }
+  return arr.join("");
+}
 
+console.log(onlyLetters("I have 4 dog"))
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
